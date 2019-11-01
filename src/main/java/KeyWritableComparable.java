@@ -5,6 +5,7 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class KeyWritableComparable implements WritableComparable<KeyWritableComparable> {
+    int airportId
 
     @Override
     public int compareTo(KeyWritableComparable keyWritableComparable) {
