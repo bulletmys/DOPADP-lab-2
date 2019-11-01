@@ -25,6 +25,6 @@ public class JoinReducer extends Reducer<KeyWritableComparable, Text, Text, Text
             }
         }
 
-        context.write();
+        context.write(airportName, );
     }
 }
