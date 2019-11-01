@@ -6,9 +6,11 @@ import java.io.IOException;
 
 public class CsvWritable implements Writable {
 
+    String[] str;
+
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-
+        dataOutput.writeUTF();
     }
 
     @Override
