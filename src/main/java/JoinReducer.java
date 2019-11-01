@@ -25,6 +25,6 @@ public class JoinReducer extends Reducer<KeyWritableComparable, Text, Text, Text
             }
         }
 
-        context.write(airportName, );
+        context.write(airportName, new Text("Min = " + min + ", Max = " + max + ""));
     }
 }
