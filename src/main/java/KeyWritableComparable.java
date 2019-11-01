@@ -8,6 +8,11 @@ public class KeyWritableComparable implements WritableComparable<KeyWritableComp
     private int airportId;
     private byte indicator;
 
+    KeyWritableComparable(int airportId, byte indicator) {
+        this.airportId = airportId;
+        this.indicator = indicator;
+    }
+
     @Override
     public int compareTo(KeyWritableComparable keyWritableComparable) {
         if (airportId > keyWritableComparable.airportId) {
