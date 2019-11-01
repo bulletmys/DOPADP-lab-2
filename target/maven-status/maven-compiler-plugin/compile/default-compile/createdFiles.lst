@@ -1,3 +1,8 @@
-WordMapper.class
-WordCountApp.class
-WordReducer.class
+ReduceSideJoin.class
+CsvReader.class
+AirportIdPartitioner.class
+AirportMapper.class
+FlightsMapper.class
+AirportIdGroupComparator.class
+JoinReducer.class
+KeyWritableComparable.class
