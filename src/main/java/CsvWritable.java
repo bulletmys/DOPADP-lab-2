@@ -10,6 +10,10 @@ public class CsvWritable implements Writable {
     private Text text = new Text();
     private String[] strings;
 
+    CsvWritable(Text text) {
+        text
+    }
+
     private void makeStrings() {
         strings = text.toString().replaceAll("\"", "").split(",");
     }
