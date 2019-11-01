@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class CsvWritable implements Writable {
 
-    String[] str;
+    Text str;
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
@@ -17,6 +17,6 @@ public class CsvWritable implements Writable {
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
-        str = dataInput.куфвА
+        str =
     }
 }
