@@ -8,15 +8,17 @@ import java.io.IOException;
 public class CsvWritable implements Writable {
 
     private Text str = new Text();
-    String[] strings;
+    private String[] strings;
 
     private void makeStrings() {
-        strings = str.toString().split()
+        strings = str.toString().replaceAll("\"", "").split(",");
     }
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-        dataOutput.writeBytes(
+        for (String str : strings) {
+            dataOutput.writeBytes(str);
+        }
     }
 
     @Override
