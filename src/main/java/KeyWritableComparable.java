@@ -30,7 +30,7 @@ public class KeyWritableComparable implements WritableComparable<KeyWritableComp
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
-        dataInput.readInt(airportId);
-
+        airportId = dataInput.readInt();
+        indicator = dataInput.readByte();
     }
 }
