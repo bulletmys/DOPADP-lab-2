@@ -10,11 +10,21 @@ public class JoinReducer extends Reducer<KeyWritableComparable, Text, Text, Text
         Text airportName = values.iterator().next();
         Iterator<Text> iterator = values.iterator();
 
-        int sum = 0;
+        int sum = 0, max = Integer.MIN_VALUE, min = Integer.MAX_VALUE;
 
         while (iterator.hasNext()) {
             Text val = iterator.next();
-            sum += val.toString()
+            int elem = Integer.parseInt(val.toString());
+            sum += elem;
+            if (elem > max) {
+                max = elem;
+            }
+
+            if (elem < min) {
+                min = elem;
+            }
         }
+
+        context.write();
     }
 }
