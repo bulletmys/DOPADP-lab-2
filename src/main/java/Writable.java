@@ -10,11 +10,13 @@ public class CsvWritable implements Writable {
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-        dataOutput.writeUTF(str);
+        for (String string : str) {
+            dataOutput.writeBytes(string);
+        }
     }
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
-
+        str = dataInput.
     }
 }
