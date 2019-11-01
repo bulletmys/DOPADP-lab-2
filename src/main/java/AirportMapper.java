@@ -9,7 +9,7 @@ public class AirportMapper extends Mapper<LongWritable, Text, KeyWritableCompara
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        String[] strings = CsvWritable()
+        String[] strings = new CsvWritable(value);
         context.write(new KeyWritableComparable());
     }
 }

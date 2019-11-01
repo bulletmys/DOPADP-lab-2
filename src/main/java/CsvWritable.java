@@ -11,10 +11,7 @@ public class CsvWritable implements Writable {
     private String[] strings;
 
     CsvWritable(Text text) {
-        text
-    }
-
-    private void makeStrings() {
+        this.text = text;
         strings = text.toString().replaceAll("\"", "").split(",");
     }
 
@@ -28,6 +25,5 @@ public class CsvWritable implements Writable {
     @Override
     public void readFields(DataInput dataInput) throws IOException {
         text.readFields(dataInput);
-        makeStrings();
     }
 }
