@@ -22,5 +22,9 @@ public class ReduceSideJoin {
         job.setMapOutputValueClass(Text.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
+
+        job.setNumReduceTasks(2);
+
+        
     }
 }
