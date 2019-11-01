@@ -1,4 +1,5 @@
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.MultipleInputs;
 import org.apache.hadoop.mapreduce.Job;
@@ -17,6 +18,8 @@ public class ReduceSideJoin {
         job.setPartitionerClass(AirportIdPartitioner.class);
         job.setGroupingComparatorClass(AirportIdGroupComparator.class);
         job.setReducerClass(JoinReducer.class);
-        job.setMapOutputKeyClass();
+        job.setMapOutputKeyClass(Text.class);
+        job.setMapOutputValueClass(Text.class);
+        
     }
 }
