@@ -20,6 +20,7 @@ public class ReduceSideJoin {
         job.setReducerClass(JoinReducer.class);
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(Text.class);
-        
+        job.setOutputKeyClass(Text.class);
+        job.setOutputValueClass(Text.class);
     }
 }
