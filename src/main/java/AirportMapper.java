@@ -3,6 +3,8 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
 
-public class AirportMapper extends Mapper<LongWritable, Text, KeyWritableComparable, >{
+public class AirportMapper extends Mapper<LongWritable, Text, KeyWritableComparable, Text>{
+
+    
 
 }
