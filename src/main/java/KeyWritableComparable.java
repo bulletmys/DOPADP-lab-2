@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class KeyWritableComparable implements WritableComparable<KeyWritableComparable> {
     int airportId;
-    byte 
+    byte indicator;
 
     @Override
     public int compareTo(KeyWritableComparable keyWritableComparable) {
