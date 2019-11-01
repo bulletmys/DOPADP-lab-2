@@ -1,3 +1,4 @@
+import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Partitioner;
 
 public class AirportIdPartitioner extends Partitioner<KeyWritableComparable, Text> {
