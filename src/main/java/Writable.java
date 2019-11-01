@@ -10,7 +10,7 @@ public class CsvWritable implements Writable {
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-        dataOutput.writeUTF();
+        dataOutput.writeUTF(str);
     }
 
     @Override
