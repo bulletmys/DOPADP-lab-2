@@ -14,13 +14,13 @@ public class KeyWritableComparable implements WritableComparable<KeyWritableComp
     }
 
     @Override
-    public int compareTo(KeyWritableComparable keyWritableComparable) {
-        if (airportId > keyWritableComparable.airportId) {
+    public int compareTo(KeyWritableComparable obj) {
+        if (airportId > obj.airportId) {
             return 1;
-        } else if (airportId == keyWritableComparable.airportId) {
-            if (indicator > keyWritableComparable.indicator) {
+        } else if (airportId == obj.airportId) {
+            if (indicator > obj.indicator) {
                 return 1;
-            } else if (indicator == keyWritableComparable.indicator) {
+            } else if (indicator == obj.indicator) {
                 return 0;
             }
         }
