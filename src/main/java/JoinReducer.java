@@ -1,2 +1,4 @@
-public class JoinReducer extends Reducer {
+import org.apache.hadoop.mapreduce.Reducer;
+
+public class JoinReducer extends Reducer<> {
 }
