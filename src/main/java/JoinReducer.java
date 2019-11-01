@@ -10,7 +10,7 @@ public class JoinReducer extends Reducer<KeyWritableComparable, Text, Text, Text
         Text airportName = values.iterator().next();
         Iterator<Text> iterator = values.iterator();
 
-        int sum = 0, max = Integer.MIN_VALUE, min = Integer.MAX_VALUE;
+        int sum = 0, max = Integer.MIN_VALUE, min = Integer.MAX_VALUE, counter = 0;
 
         while (iterator.hasNext()) {
             Text val = iterator.next();
@@ -23,8 +23,10 @@ public class JoinReducer extends Reducer<KeyWritableComparable, Text, Text, Text
             if (elem < min) {
                 min = elem;
             }
+
+            counter++;
         }
 
-        context.write(airportName, new Text("Min = " + min + ", Max = " + max + ""));
+        context.write(airportName, new Text("Min = " + min + ", Max = " + max + " Average = " + sum / counter));
     }
 }
