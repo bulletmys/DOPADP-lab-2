@@ -1,4 +1,4 @@
 import org.apache.hadoop.io.WritableComparable;
 
-public class Writables extends WritableComparable<> {
+public class WritableComparable extends WritableComparable<> {
 }
