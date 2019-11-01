@@ -10,7 +10,7 @@ public class JoinReducer extends Reducer<KeyWritableComparable, Text, Text, Text
         Text airportName = values.iterator().next();
         Iterator<Text> iterator = values.iterator();
         while (iterator.hasNext()) {
-            Text
+            Text val = 
         }
     }
 }
