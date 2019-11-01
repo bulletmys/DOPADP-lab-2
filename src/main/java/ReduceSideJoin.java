@@ -9,5 +9,6 @@ public class ReduceSideJoin {
         job.setJarByClass(ReduceSideJoin.class);
         job.setJobName("ReduceSideJoin");
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, AirportMapper.class);
+        MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, FlightsMapper.class);
     }
 }
