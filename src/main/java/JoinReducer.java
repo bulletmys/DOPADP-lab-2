@@ -1,2 +1,2 @@
-public class JoinReducer {
+public class JoinReducer extends Reducer {
 }
