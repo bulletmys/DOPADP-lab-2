@@ -13,6 +13,10 @@ public class KeyWritableComparable implements WritableComparable<KeyWritableComp
         this.indicator = indicator;
     }
 
+    public int getAirportId() {
+        return airportId;
+    }
+
     @Override
     public int compareTo(KeyWritableComparable obj) {
         if (airportId > obj.airportId) {
