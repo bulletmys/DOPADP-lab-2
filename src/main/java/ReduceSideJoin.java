@@ -6,6 +6,6 @@ public class ReduceSideJoin {
         Job job = Job.getInstance();
         job.setJarByClass(ReduceSideJoin.class);
         job.setJobName("ReduceSideJoin");
-        MultipleInputs
+        MultipleInputs.addInputPath();
     }
 }
