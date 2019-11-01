@@ -5,6 +5,6 @@ public class AirportIdPartitioner extends Partitioner<KeyWritableComparable, Tex
 
     @Override
     public int getPartition(KeyWritableComparable obj, Text text, int i) {
-        return (Integer.valueOf(obj.getAirportId()).hashCode() & Integer.MAX_VALUE)
+        return (Integer.valueOf(obj.getAirportId()).hashCode() & Integer.MAX_VALUE) % i;
     }
 }
