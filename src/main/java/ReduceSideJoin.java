@@ -14,6 +14,7 @@ public class ReduceSideJoin {
 
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
 
-        job.setPa
+        job.setPartitionerClass(AirportIdPartitioner.class);
+        job.set
     }
 }
