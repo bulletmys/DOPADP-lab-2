@@ -9,6 +9,6 @@ public class AirportMapper extends Mapper<LongWritable, Text, KeyWritableCompara
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        
+        context.write(new KeyWritableComparable());
     }
 }
