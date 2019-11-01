@@ -7,11 +7,11 @@ import java.io.IOException;
 
 public class CsvWritable implements Writable {
 
-    private Text str = new Text();
+    private Text text = new Text();
     private String[] strings;
 
     private void makeStrings() {
-        strings = str.toString().replaceAll("\"", "").split(",");
+        strings = text.toString().replaceAll("\"", "").split(",");
     }
 
     @Override
@@ -23,6 +23,7 @@ public class CsvWritable implements Writable {
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
-        str.readFields(dataInput);
+        text.readFields(dataInput);
+        makeStrings();
     }
 }
