@@ -1,2 +1,2 @@
-public class AirportIdGroupComparator {
+public class AirportIdGroupComparator extends  {
 }
