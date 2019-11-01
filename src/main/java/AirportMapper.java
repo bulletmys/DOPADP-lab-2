@@ -6,11 +6,12 @@ import java.io.IOException;
 
 
 public class AirportMapper extends Mapper<LongWritable, Text, KeyWritableComparable, Text>{
+    private static int AIRPORT_ID = 0;
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String[] strings = new CsvReader(value).getStrings();
 
-        context.write(new KeyWritableComparable(strings));
+        context.write(new KeyWritableComparable(strings[AIRPORT_ID]));
     }
 }
