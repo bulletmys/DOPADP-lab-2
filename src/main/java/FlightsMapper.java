@@ -5,8 +5,8 @@ import org.apache.hadoop.mapreduce.Mapper;
 import java.io.IOException;
 
 public class FlightsMapper extends Mapper<LongWritable, Text, KeyWritableComparable, Text> {
-    private static int AIRPORT_ID = 0;
-    private static int AIRPORT_NAME = 1;
+    private static int AIRPORT_ID = 14;
+    private static int AIRPORT_DELAY = 1;
     private static byte AIRPORT_INDICATOR = 0;
 
     @Override
