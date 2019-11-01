@@ -25,6 +25,6 @@ public class ReduceSideJoin {
 
         job.setNumReduceTasks(2);
 
-        
+        System.exit();
     }
 }
