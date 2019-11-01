@@ -1,5 +1,5 @@
-import org.apache.hadoop.mapreduce.lib.partition.HashPartitioner;
+import org.apache.hadoop.mapreduce.Partitioner;
 
-public class AirportIdPartitioner extends HashPartitioner {
+public class AirportIdPartitioner extends Partitioner<> {
 
 }
