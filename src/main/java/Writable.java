@@ -17,6 +17,6 @@ public class CsvWritable implements Writable {
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
-        str = dataInput.
+        str = dataInput.куфвА
     }
 }
