@@ -8,6 +8,6 @@ public class ReduceSideJoin {
         Job job = Job.getInstance();
         job.setJarByClass(ReduceSideJoin.class);
         job.setJobName("ReduceSideJoin");
-        MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, );
+        MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, AirportMapper.class);
     }
 }
