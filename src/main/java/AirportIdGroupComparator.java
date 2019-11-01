@@ -1,2 +1,2 @@
-public class AirportIdGroupComparator implements  {
+public class AirportIdGroupComparator implements Com {
 }
