@@ -4,7 +4,8 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-class KeyWritableComparable implements WritableComparable<KeyWritableComparable> {
+public class KeyWritableComparable implements WritableComparable<KeyWritableComparable> {
+
     @Override
     public int compareTo(KeyWritableComparable keyWritableComparable) {
         return 0;
