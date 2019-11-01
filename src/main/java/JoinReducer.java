@@ -9,8 +9,10 @@ public class JoinReducer extends Reducer<KeyWritableComparable, Text, Text, Text
     protected void reduce(KeyWritableComparable key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
         Text airportName = values.iterator().next();
         Iterator<Text> iterator = values.iterator();
+
         while (iterator.hasNext()) {
-            Text val = 
+            Text val = iterator.next();
+            
         }
     }
 }
