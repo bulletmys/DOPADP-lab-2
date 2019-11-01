@@ -13,5 +13,7 @@ public class ReduceSideJoin {
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, FlightsMapper.class);
 
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
+
+        job.setPa
     }
 }
