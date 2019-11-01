@@ -13,14 +13,18 @@ public class KeyWritableComparable implements WritableComparable<KeyWritableComp
         if (airportId > keyWritableComparable.airportId) {
             return 1;
         } else if (airportId == keyWritableComparable.airportId) {
-            if (indicator)
+            if (indicator > keyWritableComparable.indicator) {
+                return 1;
+            } else if (indicator == keyWritableComparable.indicator) {
+                return 0;
+            }
         }
-        return 0;
+        return -1;
     }
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-
+        dataOutput.
     }
 
     @Override
