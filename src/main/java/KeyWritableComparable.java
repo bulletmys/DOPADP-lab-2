@@ -24,11 +24,13 @@ public class KeyWritableComparable implements WritableComparable<KeyWritableComp
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-        dataOutput.
+        dataOutput.write(airportId);
+        dataOutput.write(indicator);
     }
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
+        dataInput.read
 
     }
 }
