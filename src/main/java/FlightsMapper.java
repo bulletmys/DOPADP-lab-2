@@ -14,7 +14,7 @@ public class FlightsMapper extends Mapper<LongWritable, Text, KeyWritableCompara
         System.out.println("BeforeFlightMapper");
         String[] strings = new CsvReader(value).getStrings();
 
-        if (!strings[DEST_ID].equals("DEST_AIRPORT_ID") && !strings[FLIGHT_DELAY].equals("ARR_DELAY_NEW") && Float.parseFloat(strings[FLIGHT_DELAY]) != 0.0) {
+        if (!strings[DEST_ID].equals("DEST_AIRPORT_ID") && !strings[FLIGHT_DELAY].equals("ARR_DELAY_NEW") && !strings[FLIGHT_DELAY].isEmpty() &&Float.parseFloat(strings[FLIGHT_DELAY]) != 0.0) {
             context.write(new KeyWritableComparable(Math.round(Float.parseFloat(strings[DEST_ID])), FLIGHT_INDICATOR), new Text(strings[FLIGHT_DELAY]));
         }
         System.out.println("AfterFlightMapper");
