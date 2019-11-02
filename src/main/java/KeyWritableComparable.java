@@ -12,6 +12,10 @@ public class KeyWritableComparable implements WritableComparable<KeyWritableComp
         this.airportId = airportId;
         this.indicator = indicator;
     }
+    KeyWritableComparable() {
+        airportId = 0;
+        indicator = 0;
+    }
 
     public int getAirportId() {
         return airportId;
