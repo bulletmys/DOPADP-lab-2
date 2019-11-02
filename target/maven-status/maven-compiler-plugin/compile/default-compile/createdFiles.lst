@@ -1,8 +1,0 @@
-ReduceSideJoin.class
-CsvReader.class
-AirportIdPartitioner.class
-AirportMapper.class
-FlightsMapper.class
-AirportIdGroupComparator.class
-JoinReducer.class
-KeyWritableComparable.class
