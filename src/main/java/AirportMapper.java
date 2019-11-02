@@ -12,8 +12,10 @@ public class AirportMapper extends Mapper<LongWritable, Text, KeyWritableCompara
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+        System.out.println("BeforeAirportMapper");
         String[] strings = new CsvReader(value).getStrings();
 
         context.write(new KeyWritableComparable(Integer.parseInt(strings[AIRPORT_ID]), AIRPORT_INDICATOR), new Text(strings[AIRPORT_NAME]));
+        System.out.println("AfterAirportMapper");
     }
 }

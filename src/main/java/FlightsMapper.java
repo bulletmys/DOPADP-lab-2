@@ -11,10 +11,12 @@ public class FlightsMapper extends Mapper<LongWritable, Text, KeyWritableCompara
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+        System.out.println("BeforeFlightMapper");
         String[] strings = new CsvReader(value).getStrings();
 
         if (Integer.parseInt(strings[FLIGHT_DELAY]) != 0) {
             context.write(new KeyWritableComparable(Integer.parseInt(strings[DEST_ID]), FLIGHT_INDICATOR), new Text(strings[FLIGHT_DELAY]));
         }
+        System.out.println("AfterFlightMapper");
     }
 }
