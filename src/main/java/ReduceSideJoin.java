@@ -18,7 +18,7 @@ public class ReduceSideJoin {
         job.setPartitionerClass(AirportIdPartitioner.class);
         job.setGroupingComparatorClass(AirportIdGroupComparator.class);
         job.setReducerClass(JoinReducer.class);
-        
+
         job.setMapOutputKeyClass(KeyWritableComparable.class);
         job.setMapOutputValueClass(Text.class);
         job.setOutputKeyClass(Text.class);
