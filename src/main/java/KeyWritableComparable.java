@@ -5,16 +5,16 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class KeyWritableComparable implements WritableComparable<KeyWritableComparable> {
-    private int airportId;
-    private byte indicator;
 
-    KeyWritableComparable(int airportId, byte indicator) {
+    private int airportId;
+    private int indicator;
+
+    public KeyWritableComparable() {
+    }
+
+    public KeyWritableComparable(int airportId, int indicator) {
         this.airportId = airportId;
         this.indicator = indicator;
-    }
-    KeyWritableComparable() {
-        airportId = 0;
-        indicator = 0;
     }
 
     public int getAirportId() {
@@ -37,13 +37,13 @@ public class KeyWritableComparable implements WritableComparable<KeyWritableComp
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-        dataOutput.write(airportId);
-        dataOutput.write(indicator);
+        dataOutput.writeInt(airportId);
+        dataOutput.writeInt(indicator);
     }
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
         airportId = dataInput.readInt();
-        indicator = dataInput.readByte();
+        indicator = dataInput.readInt();
     }
 }
