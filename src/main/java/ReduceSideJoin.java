@@ -4,7 +4,6 @@ import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.MultipleInputs;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
-import org.graalvm.compiler.replacements.Log;
 
 public class ReduceSideJoin {
     public static void main(String[] args) throws Exception {
