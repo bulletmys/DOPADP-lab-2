@@ -11,6 +11,7 @@ public class ReduceSideJoin {
             System.err.println("Usage: WordCountApp <input path> <output path>");
             System.exit(-1);
         }
+        System.out.println("BeforeJobSet");
         Job job = Job.getInstance();
         job.setJarByClass(ReduceSideJoin.class);
         job.setJobName("ReduceSideJoin");
