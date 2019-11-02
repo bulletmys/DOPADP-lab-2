@@ -15,7 +15,7 @@ public class ReduceSideJoin {
         Job job = Job.getInstance();
         job.setJarByClass(ReduceSideJoin.class);
         job.setJobName("ReduceSideJoin");
-        System.out.println("AfterJobSet");
+        //System.out.println("AfterJobSet");
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, AirportMapper.class);
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, FlightsMapper.class);
 
