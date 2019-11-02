@@ -8,6 +8,10 @@ import org.graalvm.compiler.replacements.Log;
 
 public class ReduceSideJoin {
     public static void main(String[] args) throws Exception {
+        if (args.length != 2) {
+            System.err.println("Usage: WordCountApp <input path> <output path>");
+            System.exit(-1);
+        }
         Job job = Job.getInstance();
         job.setJarByClass(ReduceSideJoin.class);
         job.setJobName("ReduceSideJoin");
